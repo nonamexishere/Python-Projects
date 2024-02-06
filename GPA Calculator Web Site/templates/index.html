@@ -1,0 +1,684 @@
+{% extends "layout.html" %}
+
+{% block body %}
+        <br>
+        <form action="/" method="POST">
+            <div align="center" width="602.52px">
+                <table id="first_table" width="601.52px" height="152px">
+                    <tr>
+                        <th>
+                            <p>Toplam Kredi</p>
+                        </th>
+                        <th>
+                            <p>Genel Not Ortalaması</p>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input align="center" autocomplete="off" name="kredi" type="text" placeholder="Kredinizi giriniz...">
+                        </td>
+                        <td>
+                            <input align="center" autocomplete="off" name="ortalama" type="text" placeholder="GPA giriniz...">
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+            <br>
+
+            <div align="center" width="602.52px">
+                <table id="second_table" height="704px" width="601.52px">
+                    <tr>
+                        <th>
+                            <p>DAHA ÖNCE</p>
+                        </th>
+                        <th>
+                            <p>KREDİ SAYISI</p>
+                        </th>
+                        <th>
+                            <p>HARF NOTU</p>
+                        </th>
+                        <th>
+                            <p>ESKİ HARF NOTU</p>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <select name="daha_once1">
+                                <option value="0">Almadım</option>
+                                <option value="1">Aldım</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="kredi1">
+                                <option value="0">--</option>
+                                <option value="1">1</option>
+                                <option value="1.5">1.5</option>
+                                <option value="2">2</option>
+                                <option value="2.5">2.5</option>
+                                <option value="3">3</option>
+                                <option value="3.5">3.5</option>
+                                <option value="4">4</option>
+                                <option value="4.5">4.5</option>
+                                <option value="5">5</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="not1">
+                                <option value="0">--</option>
+                                <option value="4">AA</option>
+                                <option value="3.75">BA+</option>
+                                <option value="3.5">BA</option>
+                                <option value="3.25">BB+</option>
+                                <option value="3">BB</option>
+                                <option value="2.75">CB+</option>
+                                <option value="2.5">CB</option>
+                                <option value="2.25">CC+</option>
+                                <option value="2">CC</option>
+                                <option value="1.75">DC+</option>
+                                <option value="1.5">DC</option>
+                                <option value="1.25">DD+</option>
+                                <option value="1">DD</option>
+                                <option value="0">FF</option>
+                                <option value="0">VF</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="eski_not1">
+                                <option value="0">--</option>
+                                <option value="4">AA</option>
+                                <option value="3.75">BA+</option>
+                                <option value="3.5">BA</option>
+                                <option value="3.25">BB+</option>
+                                <option value="3">BB</option>
+                                <option value="2.75">CB+</option>
+                                <option value="2.5">CB</option>
+                                <option value="2.25">CC+</option>
+                                <option value="2">CC</option>
+                                <option value="1.75">DC+</option>
+                                <option value="1.5">DC</option>
+                                <option value="1.25">DD+</option>
+                                <option value="1">DD</option>
+                                <option value="0">FF</option>
+                                <option value="0">VF</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <select name="daha_once2">
+                                <option value="0">Almadım</option>
+                                <option value="1">Aldım</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="kredi2">
+                                <option value="0">--</option>
+                                <option value="1">1</option>
+                                <option value="1.5">1.5</option>
+                                <option value="2">2</option>
+                                <option value="2.5">2.5</option>
+                                <option value="3">3</option>
+                                <option value="3.5">3.5</option>
+                                <option value="4">4</option>
+                                <option value="4.5">4.5</option>
+                                <option value="5">5</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="not2">
+                                <option value="0">--</option>
+                                <option value="4">AA</option>
+                                <option value="3.75">BA+</option>
+                                <option value="3.5">BA</option>
+                                <option value="3.25">BB+</option>
+                                <option value="3">BB</option>
+                                <option value="2.75">CB+</option>
+                                <option value="2.5">CB</option>
+                                <option value="2.25">CC+</option>
+                                <option value="2">CC</option>
+                                <option value="1.75">DC+</option>
+                                <option value="1.5">DC</option>
+                                <option value="1.25">DD+</option>
+                                <option value="1">DD</option>
+                                <option value="0">FF</option>
+                                <option value="0">VF</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="eski_not2">
+                                <option value="0">--</option>
+                                <option value="4">AA</option>
+                                <option value="3.75">BA+</option>
+                                <option value="3.5">BA</option>
+                                <option value="3.25">BB+</option>
+                                <option value="3">BB</option>
+                                <option value="2.75">CB+</option>
+                                <option value="2.5">CB</option>
+                                <option value="2.25">CC+</option>
+                                <option value="2">CC</option>
+                                <option value="1.75">DC+</option>
+                                <option value="1.5">DC</option>
+                                <option value="1.25">DD+</option>
+                                <option value="1">DD</option>
+                                <option value="0">FF</option>
+                                <option value="0">VF</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <select name="daha_once3">
+                                <option value="0">Almadım</option>
+                                <option value="1">Aldım</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="kredi3">
+                                <option value="0">--</option>
+                                <option value="1">1</option>
+                                <option value="1.5">1.5</option>
+                                <option value="2">2</option>
+                                <option value="2.5">2.5</option>
+                                <option value="3">3</option>
+                                <option value="3.5">3.5</option>
+                                <option value="4">4</option>
+                                <option value="4.5">4.5</option>
+                                <option value="5">5</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="not3">
+                                <option value="0">--</option>
+                                <option value="4">AA</option>
+                                <option value="3.75">BA+</option>
+                                <option value="3.5">BA</option>
+                                <option value="3.25">BB+</option>
+                                <option value="3">BB</option>
+                                <option value="2.75">CB+</option>
+                                <option value="2.5">CB</option>
+                                <option value="2.25">CC+</option>
+                                <option value="2">CC</option>
+                                <option value="1.75">DC+</option>
+                                <option value="1.5">DC</option>
+                                <option value="1.25">DD+</option>
+                                <option value="1">DD</option>
+                                <option value="0">FF</option>
+                                <option value="0">VF</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="eski_not3">
+                                <option value="0">--</option>
+                                <option value="4">AA</option>
+                                <option value="3.75">BA+</option>
+                                <option value="3.5">BA</option>
+                                <option value="3.25">BB+</option>
+                                <option value="3">BB</option>
+                                <option value="2.75">CB+</option>
+                                <option value="2.5">CB</option>
+                                <option value="2.25">CC+</option>
+                                <option value="2">CC</option>
+                                <option value="1.75">DC+</option>
+                                <option value="1.5">DC</option>
+                                <option value="1.25">DD+</option>
+                                <option value="1">DD</option>
+                                <option value="0">FF</option>
+                                <option value="0">VF</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <select name="daha_once4">
+                                <option value="0">Almadım</option>
+                                <option value="1">Aldım</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="kredi4">
+                                <option value="0">--</option>
+                                <option value="1">1</option>
+                                <option value="1.5">1.5</option>
+                                <option value="2">2</option>
+                                <option value="2.5">2.5</option>
+                                <option value="3">3</option>
+                                <option value="3.5">3.5</option>
+                                <option value="4">4</option>
+                                <option value="4.5">4.5</option>
+                                <option value="5">5</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="not4">
+                                <option value="0">--</option>
+                                <option value="4">AA</option>
+                                <option value="3.75">BA+</option>
+                                <option value="3.5">BA</option>
+                                <option value="3.25">BB+</option>
+                                <option value="3">BB</option>
+                                <option value="2.75">CB+</option>
+                                <option value="2.5">CB</option>
+                                <option value="2.25">CC+</option>
+                                <option value="2">CC</option>
+                                <option value="1.75">DC+</option>
+                                <option value="1.5">DC</option>
+                                <option value="1.25">DD+</option>
+                                <option value="1">DD</option>
+                                <option value="0">FF</option>
+                                <option value="0">VF</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="eski_not4">
+                                <option value="0">--</option>
+                                <option value="4">AA</option>
+                                <option value="3.75">BA+</option>
+                                <option value="3.5">BA</option>
+                                <option value="3.25">BB+</option>
+                                <option value="3">BB</option>
+                                <option value="2.75">CB+</option>
+                                <option value="2.5">CB</option>
+                                <option value="2.25">CC+</option>
+                                <option value="2">CC</option>
+                                <option value="1.75">DC+</option>
+                                <option value="1.5">DC</option>
+                                <option value="1.25">DD+</option>
+                                <option value="1">DD</option>
+                                <option value="0">FF</option>
+                                <option value="0">VF</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <select name="daha_once5">
+                                <option value="0">Almadım</option>
+                                <option value="1">Aldım</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="kredi5">
+                                <option value="0">--</option>
+                                <option value="1">1</option>
+                                <option value="1.5">1.5</option>
+                                <option value="2">2</option>
+                                <option value="2.5">2.5</option>
+                                <option value="3">3</option>
+                                <option value="3.5">3.5</option>
+                                <option value="4">4</option>
+                                <option value="4.5">4.5</option>
+                                <option value="5">5</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="not5">
+                                <option value="0">--</option>
+                                <option value="4">AA</option>
+                                <option value="3.75">BA+</option>
+                                <option value="3.5">BA</option>
+                                <option value="3.25">BB+</option>
+                                <option value="3">BB</option>
+                                <option value="2.75">CB+</option>
+                                <option value="2.5">CB</option>
+                                <option value="2.25">CC+</option>
+                                <option value="2">CC</option>
+                                <option value="1.75">DC+</option>
+                                <option value="1.5">DC</option>
+                                <option value="1.25">DD+</option>
+                                <option value="1">DD</option>
+                                <option value="0">FF</option>
+                                <option value="0">VF</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="eski_not5">
+                                <option value="0">--</option>
+                                <option value="4">AA</option>
+                                <option value="3.75">BA+</option>
+                                <option value="3.5">BA</option>
+                                <option value="3.25">BB+</option>
+                                <option value="3">BB</option>
+                                <option value="2.75">CB+</option>
+                                <option value="2.5">CB</option>
+                                <option value="2.25">CC+</option>
+                                <option value="2">CC</option>
+                                <option value="1.75">DC+</option>
+                                <option value="1.5">DC</option>
+                                <option value="1.25">DD+</option>
+                                <option value="1">DD</option>
+                                <option value="0">FF</option>
+                                <option value="0">VF</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <select name="daha_once6">
+                                <option value="0">Almadım</option>
+                                <option value="1">Aldım</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="kredi6">
+                                <option value="0">--</option>
+                                <option value="1">1</option>
+                                <option value="1.5">1.5</option>
+                                <option value="2">2</option>
+                                <option value="2.5">2.5</option>
+                                <option value="3">3</option>
+                                <option value="3.5">3.5</option>
+                                <option value="4">4</option>
+                                <option value="4.5">4.5</option>
+                                <option value="5">5</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="not6">
+                                <option value="0">--</option>
+                                <option value="4">AA</option>
+                                <option value="3.75">BA+</option>
+                                <option value="3.5">BA</option>
+                                <option value="3.25">BB+</option>
+                                <option value="3">BB</option>
+                                <option value="2.75">CB+</option>
+                                <option value="2.5">CB</option>
+                                <option value="2.25">CC+</option>
+                                <option value="2">CC</option>
+                                <option value="1.75">DC+</option>
+                                <option value="1.5">DC</option>
+                                <option value="1.25">DD+</option>
+                                <option value="1">DD</option>
+                                <option value="0">FF</option>
+                                <option value="0">VF</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="eski_not6">
+                                <option value="0">--</option>
+                                <option value="4">AA</option>
+                                <option value="3.75">BA+</option>
+                                <option value="3.5">BA</option>
+                                <option value="3.25">BB+</option>
+                                <option value="3">BB</option>
+                                <option value="2.75">CB+</option>
+                                <option value="2.5">CB</option>
+                                <option value="2.25">CC+</option>
+                                <option value="2">CC</option>
+                                <option value="1.75">DC+</option>
+                                <option value="1.5">DC</option>
+                                <option value="1.25">DD+</option>
+                                <option value="1">DD</option>
+                                <option value="0">FF</option>
+                                <option value="0">VF</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <select name="daha_once7">
+                                <option value="0">Almadım</option>
+                                <option value="1">Aldım</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="kredi7">
+                                <option value="0">--</option>
+                                <option value="1">1</option>
+                                <option value="1.5">1.5</option>
+                                <option value="2">2</option>
+                                <option value="2.5">2.5</option>
+                                <option value="3">3</option>
+                                <option value="3.5">3.5</option>
+                                <option value="4">4</option>
+                                <option value="4.5">4.5</option>
+                                <option value="5">5</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="not7">
+                                <option value="0">--</option>
+                                <option value="4">AA</option>
+                                <option value="3.75">BA+</option>
+                                <option value="3.5">BA</option>
+                                <option value="3.25">BB+</option>
+                                <option value="3">BB</option>
+                                <option value="2.75">CB+</option>
+                                <option value="2.5">CB</option>
+                                <option value="2.25">CC+</option>
+                                <option value="2">CC</option>
+                                <option value="1.75">DC+</option>
+                                <option value="1.5">DC</option>
+                                <option value="1.25">DD+</option>
+                                <option value="1">DD</option>
+                                <option value="0">FF</option>
+                                <option value="0">VF</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="eski_not7">
+                                <option value="0">--</option>
+                                <option value="4">AA</option>
+                                <option value="3.75">BA+</option>
+                                <option value="3.5">BA</option>
+                                <option value="3.25">BB+</option>
+                                <option value="3">BB</option>
+                                <option value="2.75">CB+</option>
+                                <option value="2.5">CB</option>
+                                <option value="2.25">CC+</option>
+                                <option value="2">CC</option>
+                                <option value="1.75">DC+</option>
+                                <option value="1.5">DC</option>
+                                <option value="1.25">DD+</option>
+                                <option value="1">DD</option>
+                                <option value="0">FF</option>
+                                <option value="0">VF</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <select name="daha_once8">
+                                <option value="0">Almadım</option>
+                                <option value="1">Aldım</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="kredi8">
+                                <option value="0">--</option>
+                                <option value="1">1</option>
+                                <option value="1.5">1.5</option>
+                                <option value="2">2</option>
+                                <option value="2.5">2.5</option>
+                                <option value="3">3</option>
+                                <option value="3.5">3.5</option>
+                                <option value="4">4</option>
+                                <option value="4.5">4.5</option>
+                                <option value="5">5</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="not8">
+                                <option value="0">--</option>
+                                <option value="4">AA</option>
+                                <option value="3.75">BA+</option>
+                                <option value="3.5">BA</option>
+                                <option value="3.25">BB+</option>
+                                <option value="3">BB</option>
+                                <option value="2.75">CB+</option>
+                                <option value="2.5">CB</option>
+                                <option value="2.25">CC+</option>
+                                <option value="2">CC</option>
+                                <option value="1.75">DC+</option>
+                                <option value="1.5">DC</option>
+                                <option value="1.25">DD+</option>
+                                <option value="1">DD</option>
+                                <option value="0">FF</option>
+                                <option value="0">VF</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="eski_not8">
+                                <option value="0">--</option>
+                                <option value="4">AA</option>
+                                <option value="3.75">BA+</option>
+                                <option value="3.5">BA</option>
+                                <option value="3.25">BB+</option>
+                                <option value="3">BB</option>
+                                <option value="2.75">CB+</option>
+                                <option value="2.5">CB</option>
+                                <option value="2.25">CC+</option>
+                                <option value="2">CC</option>
+                                <option value="1.75">DC+</option>
+                                <option value="1.5">DC</option>
+                                <option value="1.25">DD+</option>
+                                <option value="1">DD</option>
+                                <option value="0">FF</option>
+                                <option value="0">VF</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <select name="daha_once9">
+                                <option value="0">Almadım</option>
+                                <option value="1">Aldım</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="kredi9">
+                                <option value="0">--</option>
+                                <option value="1">1</option>
+                                <option value="1.5">1.5</option>
+                                <option value="2">2</option>
+                                <option value="2.5">2.5</option>
+                                <option value="3">3</option>
+                                <option value="3.5">3.5</option>
+                                <option value="4">4</option>
+                                <option value="4.5">4.5</option>
+                                <option value="5">5</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="not9">
+                                <option value="0">--</option>
+                                <option value="4">AA</option>
+                                <option value="3.75">BA+</option>
+                                <option value="3.5">BA</option>
+                                <option value="3.25">BB+</option>
+                                <option value="3">BB</option>
+                                <option value="2.75">CB+</option>
+                                <option value="2.5">CB</option>
+                                <option value="2.25">CC+</option>
+                                <option value="2">CC</option>
+                                <option value="1.75">DC+</option>
+                                <option value="1.5">DC</option>
+                                <option value="1.25">DD+</option>
+                                <option value="1">DD</option>
+                                <option value="0">FF</option>
+                                <option value="0">VF</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="eski_not9">
+                                <option value="0">--</option>
+                                <option value="4">AA</option>
+                                <option value="3.75">BA+</option>
+                                <option value="3.5">BA</option>
+                                <option value="3.25">BB+</option>
+                                <option value="3">BB</option>
+                                <option value="2.75">CB+</option>
+                                <option value="2.5">CB</option>
+                                <option value="2.25">CC+</option>
+                                <option value="2">CC</option>
+                                <option value="1.75">DC+</option>
+                                <option value="1.5">DC</option>
+                                <option value="1.25">DD+</option>
+                                <option value="1">DD</option>
+                                <option value="0">FF</option>
+                                <option value="0">VF</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <select name="daha_once10">
+                                <option value="0">Almadım</option>
+                                <option value="1">Aldım</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="kredi10">
+                                <option value="0">--</option>
+                                <option value="1">1</option>
+                                <option value="1.5">1.5</option>
+                                <option value="2">2</option>
+                                <option value="2.5">2.5</option>
+                                <option value="3">3</option>
+                                <option value="3.5">3.5</option>
+                                <option value="4">4</option>
+                                <option value="4.5">4.5</option>
+                                <option value="5">5</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="not10">
+                                <option value="0">--</option>
+                                <option value="4">AA</option>
+                                <option value="3.75">BA+</option>
+                                <option value="3.5">BA</option>
+                                <option value="3.25">BB+</option>
+                                <option value="3">BB</option>
+                                <option value="2.75">CB+</option>
+                                <option value="2.5">CB</option>
+                                <option value="2.25">CC+</option>
+                                <option value="2">CC</option>
+                                <option value="1.75">DC+</option>
+                                <option value="1.5">DC</option>
+                                <option value="1.25">DD+</option>
+                                <option value="1">DD</option>
+                                <option value="0">FF</option>
+                                <option value="0">VF</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="eski_not10">
+                                <option value="0">--</option>
+                                <option value="4">AA</option>
+                                <option value="3.75">BA+</option>
+                                <option value="3.5">BA</option>
+                                <option value="3.25">BB+</option>
+                                <option value="3">BB</option>
+                                <option value="2.75">CB+</option>
+                                <option value="2.5">CB</option>
+                                <option value="2.25">CC+</option>
+                                <option value="2">CC</option>
+                                <option value="1.75">DC+</option>
+                                <option value="1.5">DC</option>
+                                <option value="1.25">DD+</option>
+                                <option value="1">DD</option>
+                                <option value="0">FF</option>
+                                <option value="0">VF</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #333faa;;" colspan="4" align="center">
+                            <button type="submit">Hesapla</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+        <br>
+        <div align="center" width="602.52px">  
+            <table width="601.52px" align="center">
+                <tr>
+                    <td style="background-color: #333faa;" align="center">
+                        <p style="color: white;">Öneri ve Şikayetleriniz için </span><a style="color: white; text-decoration: underline;" href="mailto:bozdoganm21@itu.edu.tr">bozdoganm21@itu.edu.tr</a></p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <br>
+{% endblock %}
