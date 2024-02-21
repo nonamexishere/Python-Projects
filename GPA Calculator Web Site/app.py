@@ -144,5 +144,6 @@ def grade():
     ort = toplam_not / float(toplam_kredi)
     gpa = round(ort, 2)
     sınıf = int(toplam_kredi) / 30 + 1
+    sınıf = int(sınıf)
     
     return render_template("grade.html", gpa=gpa, toplam_kredi=toplam_kredi, sınıf=sınıf)
